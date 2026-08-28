@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { envValidationSchema } from './modules/config/env.validation';
+import { UsersModule } from './modules/users/users.module';
 
 @Module({
     imports: [
@@ -22,6 +23,7 @@ import { envValidationSchema } from './modules/config/env.validation';
                 synchronize: false,
             }),
         }),
+        UsersModule,
     ],
 })
 export class AppModule {}
