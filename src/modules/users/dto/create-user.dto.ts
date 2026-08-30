@@ -3,11 +3,11 @@ import { UserRole } from 'src/modules/entities/user.entity';
 
 export class CreateUserDto {
     @IsEmail()
-    email!: string;
+        email!: string;
 
     @MinLength(8)
-    password!: string;
+        password!: string;
 
     @IsEnum(UserRole)
-    role!: UserRole;
+        role!: UserRole;
 }
